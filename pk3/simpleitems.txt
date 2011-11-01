@@ -1,0 +1,14 @@
+actor QuakeBackpack: Backpack replaces Backpack
+{
+    +FLOATBOB
+    Scale 1.2
+
+    Inventory.PickupMessage "You got the ammo pack"
+
+    States
+    {
+      Spawn:
+        QPAK A -1 bright
+        stop
+    }
+}

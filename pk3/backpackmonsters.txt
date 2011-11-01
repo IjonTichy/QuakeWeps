@@ -1,0 +1,24 @@
+actor QuakeZombieman: Zombieman replaces Zombieman
+{
+    dropitem ZombiemanBackpackDrop
+}
+
+actor QuakeShotgunGuy: ShotgunGuy replaces ShotgunGuy
+{
+    dropitem ShotgunGuyBackpackDrop
+}
+
+actor QuakeChaingunGuy: ChaingunGuy replaces ChaingunGuy
+{
+    dropitem ChaingunGuyBackpackDrop
+}
+
+actor QuakeSuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
+{
+    dropitem SSGGuyBackpackDrop
+}
+
+actor QuakeNazi: WolfensteinSS replaces WolfensteinSS
+{
+    dropitem NaziBackpackDrop
+}

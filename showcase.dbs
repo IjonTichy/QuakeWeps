@@ -1,0 +1,10 @@
+type = "Doom Builder Map Settings Configuration";
+config = "Skull Tag (Doom in Hexen format)";
+
+SHOWCASE
+{
+	addwad = "";
+	addtexdir = "";
+	addflatdir = "";
+}
+

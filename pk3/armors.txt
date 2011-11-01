@@ -1,0 +1,96 @@
+actor QuakeGreenArmor: BasicArmorPickup replaces GreenArmor
+{
+    Radius 20
+    Height 16
+    Inventory.PickupMessage "You got green armor"
+    Inventory.RespawnTics 700
+    Inventory.Icon "GAICON"
+    Armor.SavePercent 30
+    Armor.SaveAmount 100
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        GARM A -1 bright
+        loop
+    }
+}
+
+actor QuakeYellowArmor: BasicArmorPickup replaces BlueArmor
+{
+    Radius 20
+    Height 16
+    Inventory.PickupMessage "You got yellow armor"
+    Inventory.Icon "YAICON"
+    Armor.SavePercent 60
+    Armor.SaveAmount 150
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        YARM A -1 bright
+        loop
+    }
+}
+
+actor QuakeRedArmor: BasicArmorPickup replaces RedArmor
+{
+    Radius 20
+    Height 16
+    Inventory.PickupMessage "You got red armor"
+    Inventory.Icon "RAICON"
+    Armor.SavePercent 80
+    Armor.SaveAmount 200
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        RARM A -1 bright
+        loop
+    }
+}
+
+actor QuakeMegasphere: CustomInventory replaces Megasphere
+{
+    +COUNTITEM
+    +INVENTORY.ALWAYSPICKUP
+    Inventory.PickupMessage "Megasphere"
+    Inventory.PickupSound "misc/p_pkup"
+    Inventory.PickupAnnouncerEntry "megasphere"
+    States
+    {
+      Spawn:
+        MEGA ABCD 6 BRIGHT
+        Loop
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeRedArmor", 1)
+        TNT1 A 0 A_GiveInventory("SoulSphere", 2)
+        Stop
+    }
+}
+
+
+actor QuakeArmorBonus: BasicArmorBonus replaces ArmorBonus
+{
+    Inventory.Pickupmessage "You got 5 green armor"
+
+    Inventory.Icon "GAICON"
+    Armor.SavePercent 30
+    Armor.SaveAmount 5
+    Armor.MaxSaveAmount 200
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        AMSH A -1 bright
+        loop
+    }
+}

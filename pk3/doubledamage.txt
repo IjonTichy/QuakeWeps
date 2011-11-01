@@ -1,0 +1,31 @@
+actor DoubleDamage: PowerupGiver replaces Berserk
+{
+    +COUNTITEM
+    +AUTOACTIVATE
+    +ALWAYSPICKUP
+    +FLOATBOB
+
+    Powerup.Duration -30
+    Powerup.Type "DoubleDamage"
+    Powerup.Color "FF 00 00", 0.2
+    Inventory.MaxAmount 0
+
+    Scale 0.7
+    Inventory.PickupMessage "Double damage"
+
+    states
+    {
+      Spawn:
+        DOOM A 10 bright
+        DOOM B 15 bright
+        DOOM C 8 bright
+        DOOM D 6 bright
+        loop
+    }
+}
+
+
+actor PowerDoubleDamage: PowerDamage
+{
+    DamageFactor "Normal", 2
+}

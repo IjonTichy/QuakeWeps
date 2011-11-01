@@ -1,0 +1,80 @@
+actor BackpackDrop: CustomInventory
+{
+    inventory.maxamount 0
+    +AUTOACTIVATE
+
+    +FLOATBOB
+    Scale 0.9
+
+    States
+    {
+      Spawn:
+        QPAK A -1 bright
+        stop
+    }
+}
+
+actor ZombiemanBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got 2 shells, 5 nails"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeShell", 2)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 5)
+        stop
+    }
+}
+
+actor ShotgunGuyBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got 5 shells, 2 nails"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeShell", 5)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 2)
+        stop
+    }
+}
+
+actor ChaingunGuyBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got a nailgun, 2 shells"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeShell", 2)
+        TNT1 A 0 A_GiveInventory("Quake NG", 1)
+        stop
+    }
+}
+
+actor SSGGuyBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got a super shotgun and 5 shells"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeShell", 5)
+        TNT1 A 0 A_GiveInventory("Quake SSG", 1)
+        stop
+    }
+}
+
+actor NaziBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got 2 shells, 10 nails"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("QuakeShell", 2)
+        TNT1 A 0 A_GiveInventory("QuakeNails", 10)
+        stop
+    }
+}

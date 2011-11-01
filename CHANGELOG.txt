@@ -1,0 +1,97 @@
+1.0
+-----
++ Added SG and SSG
+
+1.1
+-----
++ Added RL, GL, and Axe equivalent
+
+1.2
+-----
++ Added NG and SNG
+
+1.3
+-----
++ Added LG
+
+
+
+
+2.0
+-----
++ ARMORZ :D
+
+2.1
+-----
+* Megasphere now gives red armor
+* You now spawn with a shotgun again
+* Zombies drop backpacks with stuff in them on death
+* Railgun and Chainsaw no longer spawn (RL and shell box, respectively)
+
+2.1.1
+-----
+* Next time, add FORCERADIUSDMG to exploding puffs (LG now does real damage against bosses)
+
+2.2
+-----
++ Added double damage (replaces berserk)
+* Widened Nailgun gap
+* Changed SSG pickup message
+* Made the damage and fire rates as accurate to Quake as I could (before I was just guesstimating - this time I checked)
+* Made LG beam denser
+
+2.3
+-----
+* Moved (super) nail firing sounds to A_PlaySound
+* No more auto aim (these /are/ quake weapons, after all)
+* LG obituary fixed
+* Fixed LG damage
+
+2.4
+-----
++ Quake health pickups
++ Quake health/armor bonuses (armor bonuses give Quake green armor now)
+
+2.4.1
+-----
+* SNG is now not lulzy
+
+2.5
+-----
++ Added simple icons for the weapons
+
+2.6
+-----
++ Added simple icons for the ammo
+
+2.7
+-----
++ Added simple icons for the health
+
+2.8
+-----
++ Added simple icons for the armor (I'm done now!)
+
+2.8.1
+-----
++ So apparently I wasn't - simple backpack icon gooo
+
+2.8.2
+-----
+* Fixed the hugeass ammo icons when hud_althud is 0
+
+3.0
+-----
++ Axe icon added
+* Gave the SSG one extra sprite
+* Gave the NG and SNG a handful of extra sprites
+* Removed the translation from the SNG - it'd probably do harm somewhere along the line
+* Hi-res sprites now /properly/ implemented
+* LG beam more randomised
+* Nailguns can now fire any amount of nails (not just even amounts)
+* Zombiemen and chaingun guys now have 2 shells in their backpack
+* Shotgun guys now have 2 nails in their backpack (maybe they were poor carpenters?)
+* Nazis now drop a backpack with 2 shells and 10 nails
+* Messed around with the grenade's gravity and bounce factor - now it's 1.0 and 0.3, respectively
+* Added Inventory.Icon to all the weapons (for custom HUDs)
+* The big ammo packs now have a different pickup message from the normal ammo packs

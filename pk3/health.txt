@@ -1,0 +1,48 @@
+actor Health25: Health replaces Medikit
+{
+    Inventory.Amount 25
+    Inventory.PickupMessage "You got 25 health"
+
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        25HP A -1 bright
+        Stop
+    }
+}
+
+actor Health15: Health replaces Stimpack
+{
+    Inventory.Amount 15
+    Inventory.PickupMessage "You got 15 health"
+
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        15HP A -1 bright
+        Stop
+    }
+}
+
+actor Health5: Health replaces HealthBonus
+{
+    Inventory.Amount 5
+    Inventory.MaxAmount 200
+    Inventory.PickupMessage "You got 5 health"
+
+
+    +FLOATBOB
+
+    States
+    {
+      Spawn:
+        05HP A -1 bright
+        Stop
+    }
+}
