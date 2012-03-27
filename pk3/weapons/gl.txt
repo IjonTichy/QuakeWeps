@@ -113,5 +113,4 @@ actor QuakeGrenade
         MISL D 4 bright
         stop
     }
-
 }
