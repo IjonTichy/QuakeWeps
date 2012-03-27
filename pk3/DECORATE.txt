@@ -17,7 +17,8 @@
 #include "doubledamage.txt"
 
 #include "backpackdrops.txt"
-#include "backpackmonsters.txt"
+
+#include "monsters.txt"
 
 #include "simpleitems.txt"
 

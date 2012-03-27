@@ -1,4 +1,4 @@
-actor "Quake Fist": Weapon replaces Fist
+actor "Quake Fist": Weapon
 {
     Weapon.SelectionOrder 8
     Weapon.Kickback 100

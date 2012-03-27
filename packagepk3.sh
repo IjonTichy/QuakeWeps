@@ -1,1 +1,0 @@
-/home/ijontichy/projects/packagepk3.sh
