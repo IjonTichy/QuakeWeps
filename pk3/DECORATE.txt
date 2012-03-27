@@ -1,6 +1,7 @@
 #include "weapons/fist.txt"
 #include "weapons/sg.txt"
 #include "weapons/ssg.txt"
+#include "weapons/ssg_2.txt"
 #include "weapons/ng.txt"
 #include "weapons/sng.txt"
 #include "weapons/gl.txt"
@@ -17,7 +18,8 @@
 #include "doubledamage.txt"
 
 #include "backpackdrops.txt"
-#include "backpackmonsters.txt"
+
+#include "monsters.txt"
 
 #include "simpleitems.txt"
 
@@ -43,7 +45,7 @@ actor QuakePlayer: PlayerPawn
 
     Player.WeaponSlot 1, "Quake Fist"
     Player.WeaponSlot 2, "Quake SG"
-    Player.WeaponSlot 3, "Quake SSG"
+    Player.WeaponSlot 3, "Quake SSG", "Quake 2 SSG"
     Player.WeaponSlot 4, "Quake NG"
     Player.WeaponSlot 5, "Quake SNG"
     Player.WeaponSlot 6, "Quake GL"

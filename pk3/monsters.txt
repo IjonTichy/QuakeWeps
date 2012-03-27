@@ -1,0 +1,106 @@
+actor QuakeZombieman: Zombieman replaces Zombieman
+{
+    dropitem ZombiemanBackpackDrop
+    
+    Health 30
+    GibHealth -35
+
+    States
+    {
+      Missile:
+        POSS E 6 A_FaceTarget
+        POSS E 0 A_PlaySound("grunt/attack")
+        POSS F 8 A_CustomBulletAttack(4, 4, 8, 1)
+        POSS E 4
+        goto See
+    }
+}
+
+actor QuakeShotgunGuy: ShotgunGuy replaces ShotgunGuy
+{
+    dropitem "Quake SSG" 
+    dropitem ZombiemanBackpackDrop
+    
+    Health 50
+    GibHealth -35
+
+
+    States
+    {
+      Missile:
+        SPOS E 6 A_FaceTarget
+        SPOS E 0 A_PlaySound("shotguy/attack")
+        SPOS F 8 A_CustomBulletAttack(7, 7, 19, 1)
+        SPOS E 6
+        goto See
+    }
+}
+
+actor QuakeChaingunGuy: ChaingunGuy replaces ChaingunGuy
+{
+    dropitem ChaingunGuyBackpackDrop
+    
+    Health 80
+    GibHealth -35
+    
+    MinMissileChance 0
+
+    States
+    {
+      Missile:
+        CPOS E 4 A_FaceTarget
+        CPOS E 0 A_FaceTarget
+        CPOS E 0 A_CustomMissile("QuakeEnforcerShot", 32, 6)
+        CPOS FE 4 bright
+        CPOS E 8
+        CPOS E 0 A_FaceTarget
+        CPOS E 0 A_CustomMissile("QuakeEnforcerShot", 32, 6)
+        CPOS FE 4 bright
+        CPOS E 8
+        goto See
+    }
+}
+
+actor QuakeEnforcerShot 
+{
+    Radius 13
+    Height 8
+    
+    Projectile
+    
+    Speed 25
+    Damage (15)
+    
+    +RANDOMIZE
+    
+    RenderStyle Add
+    Alpha 0.75
+
+    SeeSound "weapons/plasmaf"
+    DeathSound "weapons/plasmax"
+    
+    Obituary "%o was melted by an enforcer."
+    
+    States
+    {
+      Spawn:
+        PLSS AB 6 bright
+        loop
+      
+      Death:
+        PLSE ABCDE 4 bright
+        stop
+    }
+}
+
+
+actor QuakeSuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
+{
+    dropitem "Quake 2 SSG" 
+    dropitem SSGGuyBackpackDrop
+}
+
+actor QuakeNazi: WolfensteinSS replaces WolfensteinSS
+{
+    dropitem NaziBackpackDrop
+}
