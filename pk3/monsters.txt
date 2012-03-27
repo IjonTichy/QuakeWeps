@@ -96,6 +96,7 @@ actor QuakeEnforcerShot
 
 actor QuakeSuperShotgunGuy: SuperShotgunGuy replaces SuperShotgunGuy
 {
+    dropitem "Quake 2 SSG" 
     dropitem SSGGuyBackpackDrop
 }
 
