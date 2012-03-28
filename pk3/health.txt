@@ -1,3 +1,8 @@
+actor Health100: SoulSphere replaces SoulSphere 
+{
+    Inventory.PickupMessage "You got 100 health"
+}
+
 actor Health25: Health replaces Medikit
 {
     Inventory.Amount 25
