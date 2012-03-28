@@ -38,14 +38,28 @@ actor ChaingunGuyBackpackDrop: BackpackDrop
     }
 }
 
-actor SSGGuyBackpackDrop: BackpackDrop
+actor ShotgunGuyBackpackDrop: BackpackDrop
 {
-    Inventory.PickupMessage "You got 10 shells"
+    Inventory.PickupMessage "You got a double barreled shotgun, 10 shells"
 
     States
     {
       Pickup:
-        TNT1 A 0 A_GiveInventory("QuakeShell", 10)
+        TNT1 A 0 A_GiveInventory("Quake SSG", 1)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 5)
+        stop
+    }
+}
+
+actor SSGGuyBackpackDrop: BackpackDrop
+{
+    Inventory.PickupMessage "You got a super shotgun, 12 shells"
+
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("Quake 2 SSG", 1)
+        TNT1 A 0 A_GiveInventory("QuakeShell", 3)
         stop
     }
 }
